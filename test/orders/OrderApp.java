@@ -104,29 +104,8 @@ public class OrderApp {
         csl();
         double[] prices = {4.6,4.6,4.5,4.8,5.5,4.5};
         String[] foodnames = {"Xωριάτικη Σαλάτα","Ανάμικτη Σαλάτα","Ceasar's Salad","Τονοσαλάτα","Σαλάτα Μαρούλι","Σαλάτα του Chef" };
-        int selection = -1;
         showFoodMenu(foodnames,prices);
-        selection = input.nextInt();
-        if(selection < prices.length + 1 ){
-            // Αν ο χρήστης πατήσει 0, επιστρέφει στο αρχικό μενού
-            if(selection == 0) {
-                csl();
-                showMenu();
-                // Αν επιλέξε 1 μέχρι και το μέγεθος του πίνακα + 1 (+1 επειδη ο πίνακας ξεκινάει απο το 0)
-                // προσθέτει στο καλάθι του το προιόν που επέλεξε.
-            }else if (selection > 0 && selection < prices.length + 1 ){
-                addToCart( foodnames[selection-1], prices[selection-1]);
-
-                cartUpdate();
-                checkoutOrContinue();
-            } else{
-                //Αν δεν πατήσει 0 ή κάποιο υπαρκτό νούμερο, το πρόγραμμα τον ενημερώνει
-                validation(2);
-            }
-
-        }else {
-            validation(2);
-        }
+        selectionExecution(foodnames,prices);
     }
 
 
@@ -139,30 +118,8 @@ public class OrderApp {
         csl();
         double[] prices = {7d ,5.3,8.6,7.6,5,8.1};
         String[] foodnames = {"Xωριάτικη Σαλάτα","Ανάμικτη Σαλάτα","Ceasar's Salad","Τονοσαλάτα","Σαλάτα Μαρούλι","Σαλάτα του Chef" };
-        int selection = -1;
         showFoodMenu(foodnames,prices);
-        selection = input.nextInt();
-        if(selection < prices.length + 1 ){
-            // Αν ο χρήστης πατήσει 0, επιστρέφει στο αρχικό μενού
-            if(selection == 0) {
-                //καθαρισμα οθόνης και εμφάνιση μενού
-                csl();
-                showMenu();
-                // Αν επιλέξε 1 μέχρι και το μέγεθος του πίνακα + 1 (+1 επειδη ο πίνακας ξεκινάει απο το 0)
-                // προσθέτει στο καλάθι του το προιόν που επέλεξε.
-            }else if (selection > 0 && selection < prices.length + 1 ){
-                addToCart( foodnames[selection-1], prices[selection-1]);
-
-                cartUpdate();
-                checkoutOrContinue();
-            } else{
-                //Αν δεν πατήσει 0 ή κάποιο υπαρκτό νούμερο, το πρόγραμμα τον ενημερώνει
-                validation(2);
-            }
-
-        }else {
-            validation(2);
-        }
+        selectionExecution(foodnames,prices);
     }
 
     /**
@@ -173,29 +130,8 @@ public class OrderApp {
         csl();
         double[] prices = {5.2,5.2, 5.2, 5.2,5.2,5.2};
         String[] foodnames = {"Γύρος χοιρινός σε πίτα","Γυρος κοτόπουλο σε πίτα", "Σουβλάκι χοιρινό σε πίτα","Σουβλάκι κοτόπουλο σε πίτα","Μπιφτέκι σε πίτα","Πανσέτα σε πίτα"};
-        int selection = -1;
         showFoodMenu(foodnames, prices);
-        selection = input.nextInt();
-        if(selection < prices.length + 1 ){
-            // Αν ο χρήστης πατήσει 0, επιστρέφει στο αρχικό μενού
-            if(selection == 0) {
-                csl();
-                showMenu();
-                // Αν επιλέξε 1 μέχρι και το μέγεθος του πίνακα + 1 (+1 επειδη ο πίνακας ξεκινάει απο το 0)
-                // προσθέτει στο καλάθι του το προιόν που επέλεξε.
-            }else if (selection > 0 && selection < prices.length + 1 ){
-                addToCart( foodnames[selection-1], prices[selection-1]);
-
-                cartUpdate();
-                checkoutOrContinue();
-            } else{
-                //Αν δεν πατήσει 0 ή κάποιο υπαρκτό νούμερο, το πρόγραμμα τον ενημερώνει
-                validation(2);
-            }
-
-        }else {
-            validation(2);
-        }
+        selectionExecution(foodnames,prices);
     }
 
     /**
@@ -206,29 +142,8 @@ public class OrderApp {
         csl();
         double[] prices = {6.6, 6.6, 6d, 6.6,6.8};
         String[] foodnames = {"Γεμιστά","Μουσακάς", "Μακαρόνια με μοσχαρίσιο κιμά","Παστίτσιο","Σουτζουκάκια με κόκκινη σάλτσα"};
-        int selection = -1;
         showFoodMenu(foodnames, prices);
-        selection = input.nextInt();
-        if(selection < prices.length + 1 ){
-            // Αν ο χρήστης πατήσει 0, επιστρέφει στο αρχικό μενού
-            if(selection == 0) {
-                csl();
-                showMenu();
-                // Αν επιλέξε 1 μέχρι και το μέγεθος του πίνακα + 1 (+1 επειδη ο πίνακας ξεκινάει απο το 0)
-                // προσθέτει στο καλάθι του το προιόν που επέλεξε.
-            }else if (selection > 0 && selection < prices.length + 1 ){
-                addToCart( foodnames[selection-1], prices[selection-1]);
-
-                cartUpdate();
-                checkoutOrContinue();
-            } else{
-                //Αν δεν πατήσει 0 ή κάποιο υπαρκτό νούμερο, το πρόγραμμα τον ενημερώνει
-                validation(2);
-            }
-
-        }else {
-            validation(2);
-        }
+        selectionExecution(foodnames,prices);
     }
 
     /**
@@ -239,30 +154,9 @@ public class OrderApp {
         csl();
         double[] prices = {6d, 5d, 6.6, 6.8};
         String[] foodnames = {"Κοτομπουκιές με πατάτες", "Club Sandwich με πατάτες", "Μακαρόνια με μοσχαρίσιο κιμά","Διπλό Χάμπουργκερ με πατάτες"};
-        int selection = -1;
         showFoodMenu(foodnames, prices);
+        selectionExecution(foodnames,prices);
 
-        selection = input.nextInt();
-        if(selection < prices.length + 1 ){
-            // Αν ο χρήστης πατήσει 0, επιστρέφει στο αρχικό μενού
-            if(selection == 0) {
-                csl();
-                showMenu();
-                // Αν επιλέξε 1 μέχρι και το μέγεθος του πίνακα + 1 (+1 επειδη ο πίνακας ξεκινάει απο το 0)
-                // προσθέτει στο καλάθι του το προιόν που επέλεξε.
-            }else if (selection > 0 && selection < prices.length + 1 ){
-                addToCart( foodnames[selection-1], prices[selection-1]);
-
-                cartUpdate();
-                checkoutOrContinue();
-            } else{
-                //Αν δεν πατήσει 0 ή κάποιο υπαρκτό νούμερο, το πρόγραμμα τον ενημερώνει
-                validation(2);
-            }
-
-        }else {
-            validation(2);
-        }
     }
 
     /**
@@ -273,30 +167,8 @@ public class OrderApp {
         csl();
         double[] prices = {2d,2d,2d,2d,2.5,2d,4.5,4.5,4.5,3.9};
         String[] drinknames = {"Coca Cola 330ml","Fanta πορτοκάλι 330ml","Sprite 330ml","Schweppes Λεμόνι 330ml","Monster Energy 500ml","Μπύρα Αλφα 500ml","Μπύρα ΕΖΑ 500ml","Μπύρα ΜΑΜΟΣ 500ml","Μπύρα Amstel Raddler 500ml","Ρετσίνα 500ml"};
-        int selection = -1;
         showFoodMenu(drinknames, prices);
-
-        selection = input.nextInt();
-        if(selection < prices.length + 1 ){
-            // Αν ο χρήστης πατήσει 0, επιστρέφει στο αρχικό μενού
-            if(selection == 0) {
-                csl();
-                showMenu();
-                // Αν επιλέξε 1 μέχρι και το μέγεθος του πίνακα + 1 (+1 επειδη ο πίνακας ξεκινάει απο το 0)
-                // προσθέτει στο καλάθι του το προιόν που επέλεξε.
-            }else if (selection > 0 && selection < prices.length + 1 ){
-                addToCart( drinknames[selection-1], prices[selection-1]);
-
-                cartUpdate();
-                checkoutOrContinue();
-            } else{
-                //Αν δεν πατήσει 0 ή κάποιο υπαρκτό νούμερο, το πρόγραμμα τον ενημερώνει
-                validation(2);
-            }
-
-        }else {
-            validation(2);
-        }
+        selectionExecution(drinknames,prices);
     }
 
 
@@ -328,6 +200,37 @@ public class OrderApp {
 
     }
 
+    public static void selectionExecution(String[] foodArray,double[] priceArray){
+        int selection = -1;
+        selection = input.nextInt();
+        if(selection < priceArray.length + 1 ){
+            // Αν ο χρήστης πατήσει 0, επιστρέφει στο αρχικό μενού
+            if(selection == 0) {
+                //καθαρισμα οθόνης και εμφάνιση μενού
+                csl();
+                showMenu();
+                // Αν επιλέξε 1 μέχρι και το μέγεθος του πίνακα + 1 (+1 επειδη ο πίνακας ξεκινάει απο το 0)
+//                // προσθέτει στο καλάθι του το προιόν που επέλεξε.
+            }else if (selection > 0 && selection < priceArray.length + 1 ){
+                addToCart( foodArray[selection-1], priceArray[selection-1]);
+
+                cartUpdate();
+                checkoutOrContinue();
+            } else{
+                //Αν δεν πατήσει 0 ή κάποιο υπαρκτό νούμερο, το πρόγραμμα τον ενημερώνει και εκτυπώνει εκ νέου
+                //το μενού της κατηγορίας
+                System.out.println("Η επιλογή σας δεν είναι σωστή, παρακαλώ επιλέξτε πληκτρολογώντας τον αριθμό αριστερά απο το φαγητό που επιθυμείτε");
+                showFoodMenu(foodArray, priceArray);
+                selectionExecution(foodArray,priceArray);
+            }
+
+        }else {
+            System.out.println("Η επιλογή σας δεν είναι σωστή, παρακαλώ επιλέξτε πληκτρολογώντας τον αριθμό αριστερά απο το φαγητό που επιθυμείτε");
+            showFoodMenu(foodArray, priceArray);
+            selectionExecution(foodArray,priceArray);
+        }
+    }
+
     /**
      * Προσθέτει στην παραγγελία το επιλεγμένο αντικείμενο
      * και ενημερώνει το συνολικό κόστος της παραγγελίας
@@ -338,7 +241,6 @@ public class OrderApp {
         orderSum += price;
         orderList[orderListID] = name;
         orderListID++;
-
     }
 
     /**
@@ -395,12 +297,13 @@ public class OrderApp {
         selection = input.nextInt();
         if(selection == 1){
             showMenu();
-        }
-        if(selection == 2){
+        } else  if(selection == 2){
             checkout();
-        }
-        if (selection == 0){
+        } else if (selection == 0){
             reset();
+        } else {
+            System.out.println("Λάθος επιλογή");
+            checkoutOrContinue();
         }
 
     }
